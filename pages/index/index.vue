@@ -33,7 +33,7 @@
 			<view class="friends">
 				<view class="friend-list" v-for="(item,index) in friends" :key="index">
 					<view class="friend-list-l">
-						<text class="tip">{{item.tip}}</text>
+						<text class="tip" v-if="item.tip > 0">{{item.tip}}</text>
 						<image :src="item.img"></image>
 					</view>
 					<view class="friend-list-r">
@@ -80,6 +80,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding-top: var(--status-bar-height);
+		padding-bottom: $uni-spacing-col-base;
 	}
 	.top-bar{
 		position: fixed;
@@ -88,6 +90,7 @@
 		left: 0;
 		width: 100%;
 		height: 88rpx;
+		padding-top: var(--status-bar-height);
 		background: $uni-bg-color;
 		box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
 		display: flex;
@@ -120,6 +123,7 @@
 	}
 	.main {
 		padding-top: 104rpx;
+		
 		width: 95%
 	}
 	.friend-list {
@@ -139,12 +143,13 @@
 			.tip {
 				position: absolute;
 				z-index: 10;
-				min-width: 36rpx;
-				top: -6rpx;
+				min-width: 20rpx;
+				top: -8rpx;
 				left: 68rpx;
 				height: 36rpx;
 				background: $uni-color-warning;
-				border-radius: $uni-border-radius-circle;
+				padding: 0 6rpx;
+				border-radius: 18rpx;
 				font-size: $uni-font-size-sm;
 				color: $uni-text-color-inverse;
 				line-height: 36rpx;
