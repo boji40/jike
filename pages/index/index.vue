@@ -8,7 +8,7 @@
 				<image src="../../static/img/titlePic.png"></image>
 			</view>
 			<view class="top-bar-right">
-				<view class="search"><image src="../../static/img/search.png"></image></view>
+				<view class="search" @click="goSearch"><image src="../../static/img/search.png"></image></view>
 				<view class="add"><image src="../../static/img/add group.png"></image></view>
 			</view>
 		</view>
@@ -69,63 +69,18 @@
 					friend.time = convertTime.dateTime(friend.time)
 				})
 				console.log(this.friends)
+			},
+			goSearch(){
+				uni.navigateTo({
+					url:"../search/search"
+				})
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding-top: var(--status-bar-height);
-		padding-bottom: $uni-spacing-col-base;
-	}
-	.top-bar{
-		position: fixed;
-		z-index: 1000;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 88rpx;
-		padding-top: var(--status-bar-height);
-		background: $uni-bg-color;
-		box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.top-bar-left{
-			margin-left: 32rpx;
-			image {
-				width: 68rpx;
-				height: 68rpx;
-				border-radius: 16rpx;
-			}
-		}
-		.top-bar-center {
-			image{
-				width: 88rpx;
-				height: 42rpx;
-			}
-		}
-		.top-bar-right {
-			display: flex;
-			image {
-				width: 52rpx;
-				height: 52rpx;
-			}
-			.add{
-				margin: 0 32rpx 0 40rpx;
-			}
-		}
-	}
-	.main {
-		padding-top: 104rpx;
-		
-		width: 95%
-	}
+	@import "../../common/css/myscc.scss";
 	.friend-list {
 		height: 96rpx;
 		padding: 16rpx $uni-spacing-col-base;

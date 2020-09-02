@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -261,7 +261,10 @@ var _default =
     // 登录
     login: function login() {
       if (this.userInfo.user !== "" && this.userInfo.password !== "" && this.loginError == "") {
-        console.log("登录");
+        // console.log("登录")
+        uni.navigateTo({
+          url: "../index/index" });
+
       }
     },
     // 注册
@@ -274,6 +277,7 @@ var _default =
         }
       }
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */

@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -234,7 +234,8 @@ var _convertTime = _interopRequireDefault(__webpack_require__(/*! ../../common/j
 //
 //
 //
-var _default = { data: function data() {return { friends: [] };}, onLoad: function onLoad() {this.getFriends();}, methods: { getFriends: function getFriends() {this.friends = _data.default.friends();this.friends.map(function (friend) {friend.img = "../../static/img/" + friend.imgurl;friend.time = _convertTime.default.dateTime(friend.time);});console.log(this.friends);} } };exports.default = _default;
+var _default = { data: function data() {return { friends: [] };}, onLoad: function onLoad() {this.getFriends();}, methods: { getFriends: function getFriends() {this.friends = _data.default.friends();this.friends.map(function (friend) {friend.img = "../../static/img/" + friend.imgurl;friend.time = _convertTime.default.dateTime(friend.time);});console.log(this.friends);}, goSearch: function goSearch() {uni.navigateTo({ url: "../search/search" });} } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

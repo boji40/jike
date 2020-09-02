@@ -124,7 +124,10 @@
 				// 登录
 				login() {
 					if (this.userInfo.user !== "" && this.userInfo.password !== "" && this.loginError == "") {
-						console.log("登录")
+						// console.log("登录")
+						uni.navigateTo({
+							url:"../index/index"
+						})
 					}
 				},
 				// 注册
@@ -143,54 +146,10 @@
 </script>
 
 <style lang="scss">
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding-top: var(--status-bar-height);
-		padding-bottom: $uni-spacing-col-base;
-	}
-	.top-bar{
-		position: fixed;
-		z-index: 1000;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 88rpx;
-		padding-top: var(--status-bar-height);
-		background: $uni-bg-color;
-		box-shadow: 0 1px 0 0 rgba(0,0,0,0.1);
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
-		.top-bar-left{
-			margin-left: 32rpx;
-			transform: rotate(180deg);
-			display: flex;
-			float: left;
-			margin-top: 20rpx;
-			image {
-				width: 52rpx;
-				height: 52rpx;
-			}
-		}
+	@import "../../common/css/myscc.scss";
 		.top-bar-right {
-			float: right;
-			margin-right: 32rpx;
-			.text{
-				font-size: $uni-font-size-lg;
-				font-weight: 500;
-				color: $uni-text-color;
-				line-height: 88rpx;
-			}
-			image {
-				margin-top: 25rpx;
-				width: 52rpx;
-				height: 52rpx;
-			}
+			width: 100%;
 		}
-	}
 	.logo {
 		image {
 			padding-top: 256rpx;

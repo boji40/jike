@@ -115,61 +115,78 @@
   width: 52rpx;
   height: 12rpx;
 }
-.top-bar-right {
+.top-bar .search-div {
+  padding: 20rpx 118rpx 14rpx 32rpx;
+  position: absolute;
+  width: 600rpx;
+  height: 60rpx;
+}
+.top-bar .search {
+  background: #f3f4f6;
+  padding: 0 60rpx 0 12rpx;
+  border-radius: 10rpx;
+}
+.top-bar .top-bar-right {
   width: 100%;
+  z-index: 100;
 }
-.logo image {
-  padding-top: 256rpx;
-  width: 192rpx;
-  height: 92rpx;
-  margin: 0 auto;
+.top-bar .search-img {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 130rpx;
+  top: 24rpx;
 }
-.main {
-  padding: 54rpx 30rpx 120rpx;
-  width: 75%;
+.result {
+  padding-top: 16rpx;
 }
-.main .title {
-  font-size: 56rpx;
-  font-weight: 500;
+.result .title {
+  font-size: 44rpx;
+  font-weight: 600;
   color: #272832;
-  line-height: 80rpx;
+  line-height: 60rpx;
 }
-.main .slogan {
-  font-size: 40rpx;
-  color: rgba(39, 40, 50, 0.6);
-  line-height: 56rpx;
+.result .list {
+  width: 95%;
+  height: 80rpx;
+  padding: 20rpx;
 }
-.main .inputs {
-  padding-top: 8rpx;
-}
-.main .inputs input {
-  height: 88rpx;
-  font-size: 32rpx;
-  font-weight: 500;
-  color: #272832;
-  line-height: 88rpx;
-  border-bottom: 1px solid rgba(30, 40, 50, 0.2);
-}
-.main .userTips {
-  font-size: 32rpx;
-  color: #ff5d5b;
-}
-.main .tips {
+.result .list image {
   float: left;
-  font-size: 32rpx;
-  color: #ff5d5b;
-  line-height: 56rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
 }
-.submit {
-  width: 520rpx;
-  height: 96rpx;
-  background: #ffe431;
-  box-shadow: 0px 50rpx 32rpx -36rpx rgba(255, 255, 49, 0.4);
-  border-radius: 48rpx;
-  font-size: 32rpx;
-  font-weight: 500;
+.result .names {
+  float: left;
+  padding-left: 16rpx;
+}
+.result .name {
+  font-size: 36rpx;
   color: #272832;
-  line-height: 96rpx;
+  line-height: 50rpx;
+}
+.result .email {
+  font-size: 24rpx;
+  color: #272832;
+  line-height: 28rpx;
+}
+.result .list-btn {
+  float: right;
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  margin-top: 16rpx;
   text-align: center;
+}
+.result .send {
+  background: #ffe431;
+  color: #272832;
+}
+.result .add {
+  background: rgba(74, 170, 255, 0.1);
+  color: #5799ff;
 }
 
