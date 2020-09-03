@@ -4,9 +4,9 @@
 			<view class="search-div">
 				<image src="../../static/img/search.png" class="search-img"></image>
 				<input type="search" @input="search" placeholder="搜索用户/群" class="search" placeholder-style="color:#aaa;font-size:14px;font-weight:200"/>
-			</view>
-			<view class="top-bar-right" @click="backHome">
-				<view class="text">取消</view>
+				<view class="top-bar-right" @click="backHome">
+					<view class="text">取消</view>
+				</view>
 			</view>
 		</view>
 		<view class="main">
@@ -103,8 +103,13 @@
 			border-radius: 10rpx;
 		}
 		.top-bar-right{
-			width: 100%;
-			z-index: 100;
+			width: 70rpx;
+			position: absolute;
+			right: 0;
+			top: 0;
+			// flex: auto;
+			// width: 100%;
+			// z-index: 100;
 		}
 		.search-img {
 			width: 40rpx;

@@ -27,8 +27,16 @@
 				<view class="intr">{{userInfo.intr}}</view>
 			</view>
 		</view>
-		<view class="bottom-bar">
+		<view class="bottom-bar" @click="addFriendAnimat">
 			<view class="bottom-btn">加为好友</view>
+		</view>
+		<view class="add-misg" :style="{height:addHeight + 'px',bottom:- +addHeight + 'px'}" :animation="animationData">
+			<view class="name">{{userInfo.name}}</view>
+			<textarea :value="myname+'请求加为好友~'" maxlength="120" class="add-main"></textarea>
+		</view>
+		<view class="add-bt" :animation="animationData">
+			<view class="close" @click="addFriendAnimat">取消</view>
+			<view class="send">发送</view>
 		</view>
 	</view>
 </template>
@@ -37,6 +45,11 @@
 	export default {
 		data() {
 			return {
+				myname:"媛",
+				addHeight:"",
+				isAdd:false,
+				animationData:{},
+				animationData:{},
 				userInfo:{
 					name:"ww",
 					nick:"冰西瓜",
@@ -44,11 +57,36 @@
 				}
 			};
 		},
+		onReady() {
+			this.getElementStyle()
+		},
 		methods:{
 			backHome(){
 				uni.navigateTo({
 					url:"../index/index"
 				})
+			},
+			getElementStyle() {
+				const query = uni.createSelectorQuery().in(this)
+				query.select('.bg').boundingClientRect(data => {
+					console.log(data)
+					this.addHeight = data.height - 186
+				}).exec()
+			},
+			// 添加好友动画
+			addFriendAnimat() {
+				this.isAdd = !this.isAdd
+				let animation = uni.createAnimation({
+					duration:300,
+					timingFunction:"ease"
+				})
+				if(this.isAdd) {
+					animation.bottom(0).step()
+				} else {
+					animation.bottom(-this.addHeight).step()
+				}
+				
+				this.animationData = animation.export()
 			}
 		}
 	}
@@ -82,7 +120,7 @@
 			height: 412rpx;
 			position: relative;
 			.sex{
-				z-index: 10;
+				z-index: 11;
 				position: absolute;
 				bottom: 12rpx;
 				right: 22rpx;
@@ -97,6 +135,7 @@
 				}
 			}
 			.user-img {
+				z-index: 10;
 				width: 400rpx;
 				height: 400rpx;
 				border-radius: 48rpx;
@@ -144,6 +183,63 @@
 			width: 684rpx;
 			height: 80rpx;
 			background: $uni-color-primary;
+			border-radius: $uni-border-radius-sm;
+		}
+	}
+	.add-misg{
+		position: fixed;
+		// bottom: 0;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 56rpx;
+		background: rgba(255,255,255,1);
+		border-radius: 40rpx 40rpx 0rpx 0rpx;
+		.name {
+			padding: 168rpx 0 40rpx;
+			font-size: 52rpx;
+			color: $uni-text-color;
+			line-height: 74rpx;
+		}
+		.add-main {
+			padding: 18rpx 22rpx;
+			width: 100%;
+			box-sizing: border-box;
+			height: 420rpx;
+			background: $uni-bg-color-grey;
+			border-radius: $uni-border-radius-base;
+			font-size: $uni-font-size-lg;
+			color: $uni-text-color;
+			line-height: 44rpx;
+		}
+	}
+	.add-bt{
+		position: absolute;
+		z-index: 100;
+		bottom: -104rpx;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 12rpx $uni-spacing-col-base;
+		height: 104rpx;
+		display: flex;
+		.send{
+			margin-left: $uni-spacing-col-base;
+			flex: auto;
+			line-height: 80rpx;
+			text-align: center;
+			font-size: $uni-font-size-lg;
+			color: $uni-text-color;
+			height: 80rpx;
+			background: $uni-color-primary;
+			border-radius: $uni-border-radius-sm;
+		}
+		.close{
+			width: 172rpx;
+			text-align: center;
+			line-height: 80rpx;
+			font-size: $uni-font-size-lg;
+			color: $uni-text-color;
+			height: 80rpx;
+			background: $uni-bg-color-hover;
 			border-radius: $uni-border-radius-sm;
 		}
 	}
