@@ -22,7 +22,7 @@
 					</view>
 				</view>
 				
-				<view class="row">
+				<view class="row" @click="modify">
 					<view class="title">签名</view>
 					<view class="cont">
 						你就像夏天冰可乐里的气泡，咕噜咕噜咕噜，轻轻走进高温的阳光
@@ -104,6 +104,17 @@
 			</view>
 			<view class="bt2">退出登录</view>
 		</view>
+		<view class="modify" :style="{bottom: -+widHeight + 'px'}" :animation="animationData">
+			<view class="modify-header">
+				<view class="close" @click="modify">取消</view>
+				<view class="title">签名</view>
+				<view class="define" @click="modifyConfirm">确定</view>
+			</view>
+			<view class="modify-main">
+				<input type="text" v-model="pwd" class="modify-pwd" placeholder="旧密码" placeholder-style="color:#aaa;font-size:14px;font-weight:200" />
+				<textarea v-model="data" class="modify-content"></textarea>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -121,7 +132,12 @@
 				index:0,
 				date:currentDate,
 				tempFilePath: '',
-				headimg:''
+				headimg:'',
+				data:'修改内容',
+				animationData:{},
+				isModify:false,
+				widHeight:"",
+				pwd:""
 			};
 		},
 		computed:{
@@ -131,6 +147,9 @@
 			endDate() {
 				return this.getDate('end')
 			}
+		},
+		onReady() {
+			this.getElementStyle()
 		},
 		methods:{
 			backOne(){
@@ -203,6 +222,33 @@
 			},
 			cancel() {
 				console.log('canceled')
+			},
+			// 获取页面高度
+			getElementStyle() {
+				const query = uni.createSelectorQuery().in(this)
+				query.select('.modify').boundingClientRect(data => {
+					// console.log(data)
+					this.widHeight = data.height
+				}).exec()
+			},
+			// 修改项弹窗
+			modify() {
+				this.isModify = !this.isModify
+				let animation = uni.createAnimation({
+					duration:300,
+					timingFunction:"ease"
+				})
+				if(this.isModify) {
+					animation.bottom(0).step()
+				} else {
+					animation.bottom(-this.widHeight).step()
+				}
+				
+				this.animationData = animation.export()
+			},
+			// 修改确定
+			modifyConfirm() {
+				this.modify()
 			}
 		}
 	}
@@ -275,6 +321,72 @@
 			font-size: $uni-font-size-lg;
 			color: $uni-color-warning;
 		}
+	}
+	.modify {
+		position: fixed;
+		z-index: 1002;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #fff;
+		.modify-header{
+			width: 100%;
+			height: 88rpx;
+			padding-top: var(--status-bar-height);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			.close{
+				padding-left: 32rpx;
+				font-size: $uni-font-size-lg;
+				color: $uni-text-color;
+				line-height: 44rpx;
+			}
+			.title{
+				flex: auto;
+				text-align: center;
+				font-size: 40rpx;
+				color: $uni-text-color;
+				line-height: 88rpx;
+			}
+			.define{
+				padding-right: $uni-spacing-col-base;
+				font-size: $uni-font-size-lg;
+				color: $uni-color-success;
+				line-height: 44rpx;
+			}
+			
+		}
+		.modify-main{
+			display: flex;
+			padding: $uni-spacing-col-base;
+			flex-direction: column;
+			.modify-pwd {
+				margin-bottom: $uni-spacing-col-base;
+				padding: 0 20rpx;
+				box-sizing: border-box;
+				width: 100%;
+				height: 88rpx;
+				background: $uni-bg-color-grey;
+				border-radius: $uni-border-radius-base;
+				font-size: $uni-font-size-lg;
+				color: $uni-text-color;
+				line-height: 88rpx;
+			}
+			.modify-content{
+				box-sizing: border-box;
+				width: 100%;
+				flex: auto;
+				height: 386rpx;
+				background: $uni-bg-color-grey;
+				border-radius: $uni-border-radius-base;
+				padding: 18rpx 22rpx;
+				font-size: $uni-font-size-lg;
+				color: $uni-text-color;
+				line-height: 44rpx;
+			}
+		}
+		
 	}
 
 </style>

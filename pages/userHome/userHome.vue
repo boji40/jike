@@ -66,6 +66,7 @@
 					url:"../index/index"
 				})
 			},
+			// 获取页面高度
 			getElementStyle() {
 				const query = uni.createSelectorQuery().in(this)
 				query.select('.bg').boundingClientRect(data => {
