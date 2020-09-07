@@ -22,10 +22,10 @@
 					</view>
 				</view>
 				
-				<view class="row" @click="modify">
+				<view class="row" @click="modify('签名',dataArr.sign,false)">
 					<view class="title">签名</view>
 					<view class="cont">
-						你就像夏天冰可乐里的气泡，咕噜咕噜咕噜，轻轻走进高温的阳光
+						{{dataArr.sign}}
 					</view>
 					<view class="more">
 						<image src="../../static/img/leftmore.png" mode="aspectFill"></image>
@@ -35,14 +35,14 @@
 				<view class="row">
 					<view class="title">注册</view>
 					<view class="cont">
-						2020-09-03
+						{{changeTime(dataArr.register)}}
 					</view>
 				</view>
 				
-				<view class="row">
+				<view class="row" @click="modify('昵称',dataArr.name,false)">
 					<view class="title">昵称</view>
 					<view class="cont">
-						旺旺仙贝
+						{{dataArr.name}}
 					</view>
 					<view class="more">
 						<image src="../../static/img/leftmore.png" mode="aspectFill"></image>
@@ -76,7 +76,7 @@
 				<view class="row">
 					<view class="title">电话</view>
 					<view class="cont">
-						12356458585
+						{{dataArr.tell}}
 					</view>
 					<view class="more">
 						<image src="../../static/img/leftmore.png" mode="aspectFill"></image>
@@ -86,16 +86,16 @@
 				<view class="row">
 					<view class="title">邮箱</view>
 					<view class="cont">
-						59+484894sa
+						{{dataArr.email}}
 					</view>
 					<view class="more">
 						<image src="../../static/img/leftmore.png" mode="aspectFill"></image>
 					</view>
 				</view>
-				<view class="row">
+				<view class="row" @click="modify('密码',dataArr.pwd,true)">
 					<view class="title">密码</view>
 					<view class="cont">
-						56465534
+						{{dataArr.pwd}}
 					</view>
 					<view class="more">
 						<image src="../../static/img/leftmore.png" mode="aspectFill"></image>
@@ -111,7 +111,7 @@
 				<view class="define" @click="modifyConfirm">确定</view>
 			</view>
 			<view class="modify-main">
-				<input type="text" v-model="pwd" class="modify-pwd" placeholder="旧密码" placeholder-style="color:#aaa;font-size:14px;font-weight:200" />
+				<input type="text" v-model="pwd" v-if="ispwd" class="modify-pwd" placeholder="旧密码" placeholder-style="color:#aaa;font-size:14px;font-weight:200" />
 				<textarea v-model="data" class="modify-content"></textarea>
 			</view>
 		</view>
@@ -120,6 +120,7 @@
 
 <script>
 	import ImageCropper from "../../components/ling-imgcropper/ling-imgcropper.vue";
+	import timeProcess from "../../common/js/convertTime.js"
 	export default {
 		 components: {ImageCropper},
 		data() {
@@ -127,6 +128,16 @@
 				format:true
 			})
 			return {
+				dataArr:{
+					name:"ww",
+					sign:"你就像夏天冰可乐里的气泡，咕噜咕噜咕噜，轻轻走进高温的阳光",
+					register:new Date(),
+					sex:"男",
+					birth:"1998-02-01",
+					tell:"45689942455",
+					pwd:"123456",
+					email:"123456@163.com"
+				},
 				cropFilePath:"../../static/img/girl.jpg",
 				sex:['女','男','未知'],
 				index:0,
@@ -137,7 +148,10 @@
 				animationData:{},
 				isModify:false,
 				widHeight:"",
-				pwd:""
+				pwd:"",
+				modifyTitle:"",
+				ispwd:false, //是否显示密码框
+				
 			};
 		},
 		computed:{
@@ -232,7 +246,10 @@
 				}).exec()
 			},
 			// 修改项弹窗
-			modify() {
+			modify(type,data,ispwd) {
+				this.ispwd = ispwd
+				this.modifyTitle = type
+				this.data = data
 				this.isModify = !this.isModify
 				let animation = uni.createAnimation({
 					duration:300,
@@ -249,7 +266,11 @@
 			// 修改确定
 			modifyConfirm() {
 				this.modify()
-			}
+			},
+			// 时间处理
+			changeTime(date){
+				return timeProcess.detailTime(date)
+			},
 		}
 	}
 </script>

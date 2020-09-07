@@ -81,6 +81,9 @@
 
 <style lang="scss">
 	@import "../../common/css/myscc.scss";
+	.top-bar{
+		background: $uni-bg-color;
+	}
 	.friend-list {
 		height: 96rpx;
 		padding: 16rpx $uni-spacing-col-base;
