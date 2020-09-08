@@ -112,5 +112,53 @@ export default {
 			},
 		]
 		return friend
+	},
+	message: function() {
+		let msg = [
+			{
+				id:'a',
+				imgurl: 'beauty.jpg',
+				message: '如果你经常收到我推荐的音乐，是很喜欢的人如果你经常收到我推荐的音乐，是很喜欢的人',
+				types: 0,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000,
+				tip:0
+			},{
+				id:'b',
+				imgurl: 'friend2.jpg',
+				message: '如果你经常收到我推荐的音乐',
+				types: 0,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000*16,
+				tip:1
+			},{
+				id:'a',
+				imgurl: 'beauty.jpg',
+				message: '如果',
+				types: 0,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000*20,
+				tip:2
+			},{
+				id:'b',
+				imgurl: 'friend2.jpg',
+				message: 'friend2.jpg',
+				types: 1,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000*60*20,
+				tip:4
+			},{
+				id:'b',
+				imgurl: 'friend2.jpg',
+				message: 'friend1.jpg',
+				types: 1,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000*60*36,
+				tip:5
+			},{
+				id:'a',
+				imgurl: 'beauty.jpg',
+				message: '如果你经常收到我推荐的音乐，是很喜欢的人如果你经常收到我推荐的音乐，是很喜欢的人',
+				types: 0,   //0文字，1图片链接，2音频链接
+				time:new Date() - 1000*58*60,
+				tip:9
+			}
+		]
+		return msg
 	}
 }

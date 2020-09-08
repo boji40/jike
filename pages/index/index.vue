@@ -83,6 +83,12 @@
 	@import "../../common/css/myscc.scss";
 	.top-bar{
 		background: $uni-bg-color;
+		.top-bar-right{
+			image {
+				width: 52rpx;
+				height: 52rpx;
+			}
+		}
 	}
 	.friend-list {
 		height: 96rpx;
