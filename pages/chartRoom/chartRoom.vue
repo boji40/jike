@@ -14,9 +14,9 @@
 				</view>
 			</view>
 		</view>
-		<scroll-view class="chat" scroll-y="true" scroll-with-animation="true">
+		<scroll-view class="chat" scroll-y="true" scroll-with-animation="true" :scroll-into-view="scrollToView">
 			 <view class="chat-main">
-				 <view class="chat-ls" v-for="(item,index) in msgs" :key="index">
+				 <view class="chat-ls" v-for="(item,index) in msgs" :key="index" :id="'msg'+item.tip">
 					 <view class="chat-time" v-if="item.time != ''">{{item.time}}</view>
 					 <view class="msg-m msg-left" v-if="item.id != 'b'">
 						 <image :src="item.img" class="user-img"></image>
@@ -39,22 +39,29 @@
 				 </view>
 			 </view>
 		</scroll-view>
+		<sendInput></sendInput>
 	</view>
 </template>
 
 <script>
 	import datas from "../../common/js/data.js"
 	import convertTime from "../../common/js/convertTime.js"
+	import sendInput from "../../components/sendInput/sendInput.vue"
 	export default {
 		data() {
 			return {
 				msgs:[],
 				msgImg:[],
-				oldTime:new Date()
+				oldTime:new Date(),
+				scrollToView: 'msg'+ 0,
 			};
+		},
+		components:{
+			sendInput
 		},
 		onLoad() {
 			this.getMsg()
+			// console.log(this.scrollToView)	
 		},
 		methods:{
 			getMsg(){
@@ -75,6 +82,10 @@
 						this.msgImg.unshift(msg.msgImg)
 					}
 				})
+				
+				// this.$nextTick(function(){
+				// 	this.scrollToView = 'msg' + this.msgs[this.msgs.length-1].tip
+				// })
 				this.msgs.reverse()
 			},
 			// 预览图片
@@ -109,8 +120,9 @@
 		height: 100%;
 	}
 	.top-bar{
-		position: absolute;
+		position: fixed;
 		border-bottom: 1px solid $uni-border-color;
+		background-color: #fff;
 		.group-img{
 			position: absolute;
 			bottom: 10rpx;

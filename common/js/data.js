@@ -135,7 +135,7 @@ export default {
 				message: '如果',
 				types: 0,   //0文字，1图片链接，2音频链接
 				time:new Date() - 1000*20,
-				tip:2
+				tip:3
 			},{
 				id:'b',
 				imgurl: 'friend2.jpg',
@@ -153,7 +153,7 @@ export default {
 			},{
 				id:'a',
 				imgurl: 'beauty.jpg',
-				message: '如果你经常收到我推荐的音乐，是很喜欢的人如果你经常收到我推荐的音乐，是很喜欢的人',
+				message: '如果你经常收到我',
 				types: 0,   //0文字，1图片链接，2音频链接
 				time:new Date() - 1000*58*60,
 				tip:9
