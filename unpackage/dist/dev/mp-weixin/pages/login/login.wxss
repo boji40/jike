@@ -99,10 +99,6 @@
   color: #272832;
   line-height: 88rpx;
 }
-.top-bar .top-bar-right image {
-  width: 52rpx;
-  height: 52rpx;
-}
 .top-bar .top-bar-right .add {
   margin-left: 32rpx;
 }

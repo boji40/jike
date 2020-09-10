@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="content">
 		<view class="top-bar">
 			<view class="top-bar-left" @click="backOne">
 				<image src="../../static/img/goback.png" class="back-img"></image>

@@ -99,10 +99,6 @@
   color: #272832;
   line-height: 88rpx;
 }
-.top-bar .top-bar-right image {
-  width: 52rpx;
-  height: 52rpx;
-}
 .top-bar .top-bar-right .add {
   margin-left: 32rpx;
 }
@@ -114,6 +110,13 @@
 .top-bar .top-bar-right .more-img image {
   width: 52rpx;
   height: 12rpx;
+}
+.top-bar {
+  background: #ffffff;
+}
+.top-bar .top-bar-right image {
+  width: 52rpx;
+  height: 52rpx;
 }
 .friend-list {
   height: 96rpx;

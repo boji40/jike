@@ -99,10 +99,6 @@
   color: #272832;
   line-height: 88rpx;
 }
-.top-bar .top-bar-right image {
-  width: 52rpx;
-  height: 52rpx;
-}
 .top-bar .top-bar-right .add {
   margin-left: 32rpx;
 }
@@ -143,7 +139,7 @@
   position: relative;
 }
 .main .user-header .sex {
-  z-index: 10;
+  z-index: 11;
   position: absolute;
   bottom: 12rpx;
   right: 22rpx;
@@ -158,6 +154,7 @@
   height: 32rpx;
 }
 .main .user-header .user-img {
+  z-index: 10;
   width: 400rpx;
   height: 400rpx;
   border-radius: 48rpx;
@@ -204,6 +201,66 @@
   width: 684rpx;
   height: 80rpx;
   background: #ffe431;
+  border-radius: 10rpx;
+}
+.add-misg {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 56rpx;
+  background: white;
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+}
+.add-misg .name {
+  padding: 168rpx 0 40rpx;
+  font-size: 52rpx;
+  color: #272832;
+  line-height: 74rpx;
+}
+.add-misg .add-main {
+  padding: 18rpx 22rpx;
+  width: 100%;
+  box-sizing: border-box;
+  height: 420rpx;
+  background: #f3f4f6;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  color: #272832;
+  line-height: 44rpx;
+}
+.add-bt {
+  position: absolute;
+  z-index: 100;
+  bottom: -104rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12rpx 16rpx;
+  height: 104rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.add-bt .send {
+  margin-left: 16rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #272832;
+  height: 80rpx;
+  background: #ffe431;
+  border-radius: 10rpx;
+}
+.add-bt .close {
+  width: 172rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #272832;
+  height: 80rpx;
+  background: rgba(39, 40, 50, 0.2);
   border-radius: 10rpx;
 }
 

@@ -15,7 +15,7 @@
 			</view>
 		</view>
 		<scroll-view class="chat" scroll-y="true" scroll-with-animation="true" :scroll-into-view="scrollToView">
-			 <view class="chat-main">
+			 <view class="chat-main" :style="{paddingBottom:inputh + 'px'}">
 				 <view class="chat-ls" v-for="(item,index) in msgs" :key="index" :id="'msg'+item.tip">
 					 <view class="chat-time" v-if="item.time != ''">{{item.time}}</view>
 					 <view class="msg-m msg-left" v-if="item.id != 'b'">
@@ -38,8 +38,9 @@
 					 </view>
 				 </view>
 			 </view>
+			 <view class="padbt"></view>
 		</scroll-view>
-		<sendInput></sendInput>
+		<sendInput @sendContent = 'sendContent' @height='height'></sendInput>
 	</view>
 </template>
 
@@ -53,7 +54,8 @@
 				msgs:[],
 				msgImg:[],
 				oldTime:new Date(),
-				scrollToView: 'msg'+ 0,
+				scrollToView: '',
+				inputh: '60',
 			};
 		},
 		components:{
@@ -61,7 +63,6 @@
 		},
 		onLoad() {
 			this.getMsg()
-			// console.log(this.scrollToView)	
 		},
 		methods:{
 			getMsg(){
@@ -82,11 +83,15 @@
 						this.msgImg.unshift(msg.msgImg)
 					}
 				})
-				
-				// this.$nextTick(function(){
-				// 	this.scrollToView = 'msg' + this.msgs[this.msgs.length-1].tip
-				// })
 				this.msgs.reverse()
+				this.goBottom()
+			},
+			// 滚动到底部
+			goBottom() {
+				this.scrollToView = ''
+				this.$nextTick(function(){
+					this.scrollToView = 'msg' + this.msgs[this.msgs.length-1].tip
+				})
 			},
 			// 预览图片
 			previewImg(e){
@@ -109,7 +114,27 @@
 						}
 					}
 				});
-			}
+			},
+			// 回车键发送消息
+			sendContent(e) {
+				// console.log(e)
+				let len = this.msgs.length
+				let data = {
+					id:'b',
+					img: '../../static/img//friend2.jpg',
+					message: e,
+					types: 0,   //0文字，1图片链接，2音频链接
+					time:new Date().getHours() + ':' + new Date().getMinutes(),
+					tip: len
+				}
+				this.msgs.push(data)
+				this.goBottom()
+			},
+			// 动态生成高度
+			height(e) {
+				this.inputh = e
+				this.goBottom()
+			},
 		}
 	}
 </script>
@@ -136,12 +161,15 @@
 		}
 	}
 	.chat{
-		height: 100%;
+		 height: calc(100vh - 0rpx);
+		.padbt{
+			height: var(--status-bar-height);
+			width: 100%;
+		}
 		.chat-main{
 			padding-left: $uni-spacing-col-base;
 			padding-right: $uni-spacing-col-base;
 			padding-top: 100rpx;
-			padding-bottom: 120rpx;
 			display: flex;
 			flex-direction: column;
 		}

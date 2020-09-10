@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -363,7 +363,144 @@ var baseApi = /*#__PURE__*/Object.freeze({
   upx2px: upx2px,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
-  interceptors: interceptors });
+  interceptors: interceptors });var
+
+
+EventChannel = /*#__PURE__*/function () {
+  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
+    this.id = id;
+    this.listener = {};
+    this.emitCache = {};
+    if (events) {
+      Object.keys(events).forEach(function (name) {
+        _this.on(name, events[name]);
+      });
+    }
+  }_createClass(EventChannel, [{ key: "emit", value: function emit(
+
+    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
+      }
+      fns.forEach(function (opt) {
+        opt.fn.apply(opt.fn, args);
+      });
+      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
+    } }, { key: "on", value: function on(
+
+    eventName, fn) {
+      this._addListener(eventName, 'on', fn);
+      this._clearCache(eventName);
+    } }, { key: "once", value: function once(
+
+    eventName, fn) {
+      this._addListener(eventName, 'once', fn);
+      this._clearCache(eventName);
+    } }, { key: "off", value: function off(
+
+    eventName, fn) {
+      var fns = this.listener[eventName];
+      if (!fns) {
+        return;
+      }
+      if (fn) {
+        for (var i = 0; i < fns.length;) {
+          if (fns[i].fn === fn) {
+            fns.splice(i, 1);
+            i--;
+          }
+          i++;
+        }
+      } else {
+        delete this.listener[eventName];
+      }
+    } }, { key: "_clearCache", value: function _clearCache(
+
+    eventName) {
+      var cacheArgs = this.emitCache[eventName];
+      if (cacheArgs) {
+        for (; cacheArgs.length > 0;) {
+          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
+        }
+      }
+    } }, { key: "_addListener", value: function _addListener(
+
+    eventName, type, fn) {
+      (this.listener[eventName] || (this.listener[eventName] = [])).push({
+        fn: fn,
+        type: type });
+
+    } }]);return EventChannel;}();
+
+
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+var id = 0;
+
+function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  id++;
+  var eventChannel = new EventChannel(id, events);
+  if (cache) {
+    eventChannels[id] = eventChannel;
+    eventChannelStack.push(eventChannel);
+  }
+  return eventChannel;
+}
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
+var navigateTo = {
+  args: function args(fromArgs, toArgs) {
+    var id = initEventChannel(fromArgs.events).id;
+    if (fromArgs.url) {
+      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
+    }
+  },
+  returnValue: function returnValue(fromRes, toRes) {
+    fromRes.eventChannel = getEventChannel();
+  } };
+
+
+function findExistsPageIndex(url) {
+  var pages = getCurrentPages();
+  var len = pages.length;
+  while (len--) {
+    var page = pages[len];
+    if (page.$page && page.$page.fullPath === url) {
+      return len;
+    }
+  }
+  return -1;
+}
+
+var redirectTo = {
+  name: function name(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.delta) {
+      return 'navigateBack';
+    }
+    return 'redirectTo';
+  },
+  args: function args(fromArgs) {
+    if (fromArgs.exists === 'back' && fromArgs.url) {
+      var existsPageIndex = findExistsPageIndex(fromArgs.url);
+      if (existsPageIndex !== -1) {
+        var delta = getCurrentPages().length - 1 - existsPageIndex;
+        if (delta > 0) {
+          fromArgs.delta = delta;
+        }
+      }
+    }
+  } };
 
 
 var previewImage = {
@@ -412,6 +549,8 @@ function addSafeAreaInsets(result) {
   }
 }
 var protocols = {
+  redirectTo: redirectTo,
+  navigateTo: navigateTo,
   previewImage: previewImage,
   getSystemInfo: {
     returnValue: addSafeAreaInsets },
@@ -499,7 +638,12 @@ function wrapper(methodName, method) {
       if (typeof arg2 !== 'undefined') {
         args.push(arg2);
       }
-      var returnValue = wx[options.name || methodName].apply(wx, args);
+      if (isFn(options.name)) {
+        methodName = options.name(arg1);
+      } else if (isStr(options.name)) {
+        methodName = options.name;
+      }
+      var returnValue = wx[methodName].apply(wx, args);
       if (isSyncApi(methodName)) {// 同步 api
         return processReturnValue(methodName, returnValue, options.returnValue, isContextApi(methodName));
       }
@@ -627,7 +771,7 @@ function initTriggerEvent(mpInstance) {
     }
   }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
+  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
     return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
   };
 }
@@ -640,7 +784,7 @@ function initHook(name, options) {
     };
   } else {
     options[name] = function () {
-      initTriggerEvent(this);for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {args[_key4] = arguments[_key4];}
+      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
       return oldHook.apply(this, args);
     };
   }
@@ -1108,7 +1252,7 @@ function getContextVm(vm) {
   return $parent && $parent.$parent;
 }
 
-function handleEvent(event) {var _this = this;
+function handleEvent(event) {var _this2 = this;
   event = wrapper$1(event);
 
   // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
@@ -1139,14 +1283,14 @@ function handleEvent(event) {var _this = this;
       eventsArray.forEach(function (eventArray) {
         var methodName = eventArray[0];
         if (methodName) {
-          var handlerCtx = _this.$vm;
+          var handlerCtx = _this2.$vm;
           if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
             handlerCtx = getContextVm(handlerCtx) || handlerCtx;
           }
           if (methodName === '$emit') {
             handlerCtx.$emit.apply(handlerCtx,
             processEventArgs(
-            _this.$vm,
+            _this2.$vm,
             event,
             eventArray[1],
             eventArray[2],
@@ -1166,16 +1310,16 @@ function handleEvent(event) {var _this = this;
             handler.once = true;
           }
           var params = processEventArgs(
-          _this.$vm,
+          _this2.$vm,
           event,
           eventArray[1],
           eventArray[2],
           isCustom,
-          methodName) ||
-          [];
+          methodName);
+
           // 参数尾部增加原始事件对象用于复杂表达式内获取额外数据
           // eslint-disable-next-line no-sparse-arrays
-          ret.push(handler.apply(handlerCtx, params.concat([,,,,,,,,,, event])));
+          ret.push(handler.apply(handlerCtx, (Array.isArray(params) ? params : []).concat([,,,,,,,,,, event])));
         }
       });
     }
@@ -1360,8 +1504,65 @@ function parseApp(vm) {
 }
 
 function createApp(vm) {
+  _vue.default.prototype.getOpenerEventChannel = function () {
+    if (!this.__eventChannel__) {
+      this.__eventChannel__ = new EventChannel();
+    }
+    return this.__eventChannel__;
+  };
+  var callHook = _vue.default.prototype.__call_hook;
+  _vue.default.prototype.__call_hook = function (hook, args) {
+    if (hook === 'onLoad' && args && args.__id__) {
+      this.__eventChannel__ = getEventChannel(args.__id__);
+      delete args.__id__;
+    }
+    return callHook.call(this, hook, args);
+  };
   App(parseApp(vm));
   return vm;
+}
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function encodeReserveReplacer(c) {return '%' + c.charCodeAt(0).toString(16);};
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function encode(str) {return encodeURIComponent(str).
+  replace(encodeReserveRE, encodeReserveReplacer).
+  replace(commaRE, ',');};
+
+function stringifyQuery(obj) {var encodeStr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : encode;
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return '';
+    }
+
+    if (val === null) {
+      return encodeStr(key);
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return;
+        }
+        if (val2 === null) {
+          result.push(encodeStr(key));
+        } else {
+          result.push(encodeStr(key) + '=' + encodeStr(val2));
+        }
+      });
+      return result.join('&');
+    }
+
+    return encodeStr(key) + '=' + encodeStr(val);
+  }).filter(function (x) {return x.length > 0;}).join('&') : null;
+  return res ? "?".concat(res) : '';
 }
 
 function parseBaseComponent(vueComponentOptions)
@@ -1486,9 +1687,15 @@ function parseBasePage(vuePageOptions, _ref6)
 
   initHooks(pageOptions.methods, hooks$1, vuePageOptions);
 
-  pageOptions.methods.onLoad = function (args) {
-    this.$vm.$mp.query = args; // 兼容 mpvue
-    this.$vm.__call_hook('onLoad', args);
+  pageOptions.methods.onLoad = function (query) {
+    this.options = query;
+    var copyQuery = Object.assign({}, query);
+    delete copyQuery.__id__;
+    this.$page = {
+      fullPath: '/' + (this.route || this.is) + stringifyQuery(copyQuery) };
+
+    this.$vm.$mp.query = query; // 兼容 mpvue
+    this.$vm.__call_hook('onLoad', query);
   };
 
   return pageOptions;
@@ -1598,137 +1805,7 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-
-/***/ 10:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 2:
+/* 2 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -7771,8 +7848,186 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
+/* 3 */
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-/***/ 25:
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 4 */
+/*!**************************************!*\
+  !*** E:/work/uniApp/jike/pages.json ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
 /*!*********************************************!*\
   !*** E:/work/uniApp/jike/common/js/data.js ***!
   \*********************************************/
@@ -7894,11 +8149,58 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
     return friend;
+  },
+  message: function message() {
+    var msg = [
+    {
+      id: 'a',
+      imgurl: 'beauty.jpg',
+      message: '如果你经常收到我推荐的音乐，是很喜欢的人如果你经常收到我推荐的音乐，是很喜欢的人',
+      types: 0, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000,
+      tip: 0 },
+    {
+      id: 'b',
+      imgurl: 'friend2.jpg',
+      message: '如果你经常收到我推荐的音乐',
+      types: 0, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000 * 16,
+      tip: 1 },
+    {
+      id: 'a',
+      imgurl: 'beauty.jpg',
+      message: '如果',
+      types: 0, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000 * 20,
+      tip: 3 },
+    {
+      id: 'b',
+      imgurl: 'friend2.jpg',
+      message: 'friend2.jpg',
+      types: 1, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000 * 60 * 20,
+      tip: 4 },
+    {
+      id: 'b',
+      imgurl: 'friend2.jpg',
+      message: 'friend1.jpg',
+      types: 1, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000 * 60 * 36,
+      tip: 5 },
+    {
+      id: 'a',
+      imgurl: 'beauty.jpg',
+      message: '如果你经常收到我',
+      types: 0, //0文字，1图片链接，2音频链接
+      time: new Date() - 1000 * 58 * 60,
+      tip: 9 }];
+
+
+    return msg;
   } };exports.default = _default;
 
 /***/ }),
-
-/***/ 26:
+/* 18 */
 /*!****************************************************!*\
   !*** E:/work/uniApp/jike/common/js/convertTime.js ***!
   \****************************************************/
@@ -7951,51 +8253,112 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     } else {//大于两天
       return Y + '/' + M + '/' + D;
     }
+  },
+
+  // 聊天时间转换
+  chartTime: function chartTime(e) {
+    var old = new Date(e);
+    var now = new Date();
+
+    // 获取old的具体时间
+    var d = old.getTime();
+    var h = old.getHours();
+    var m = old.getMinutes();
+    var Y = old.getFullYear();
+    var M = old.getMonth() + 1;
+    var D = old.getDate();
+
+    // 获取now具体时间
+    var nd = now.getTime();
+    var nh = now.getHours();
+    var nm = now.getMinutes();
+    var nY = now.getFullYear();
+    var nM = now.getMonth() + 1;
+    var nD = now.getDate();
+
+    // 当天时间
+    if (D === nD && M === nM && Y === nY) {
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return h + ":" + m;
+    }
+
+    // 昨天时间
+    if (D + 1 === nD && M === nM && Y === nY) {
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return "昨天" + h + ":" + m;
+    } else if (Y === nY) {
+      // 今年
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return M + '月' + D + '日  ' + h + ':' + m;
+    } else {//大于今年
+      if (h < 10) {
+        h = '0' + h;
+      }
+      if (m < 10) {
+        m = '0' + m;
+      }
+      return Y + '年' + M + '月' + D + '日  ' + h + ':' + m;
+    }
+  },
+
+  // 间隔时间差
+  spaceTime: function spaceTime(old, now) {
+    old = new Date(old);
+    now = new Date(now);
+    var told = old.getTime();
+    var tnow = now.getTime();
+    if (told > tnow + 1000 * 60 * 5) {
+      return now;
+    } else {
+      return '';
+    }
+  },
+
+  // 详细时间
+  detailTime: function detailTime(e) {
+    var old = new Date(e);
+
+    // 获取old的具体时间
+    var d = old.getTime();
+    var h = old.getHours();
+    var m = old.getMinutes();
+    var Y = old.getFullYear();
+    var M = old.getMonth() + 1;
+    var D = old.getDate();
+
+    // 处理时间
+    if (M < 10) {
+      M = '0' + M;
+    }
+    if (h < 10) {
+      h = '0' + h;
+    }
+    if (m < 10) {
+      m = '0' + m;
+    }
+    if (D < 10) {
+      D = '0' + D;
+    }
+
+    return Y + '-' + M + '-' + D + '   ' + h + ":" + m;
+
   } };exports.default = _default;
 
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ 4:
-/*!**************************************!*\
-  !*** E:/work/uniApp/jike/pages.json ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
 /***/ })
-
-}]);
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
